@@ -30,16 +30,64 @@
 // Karra(5)
 
 // 4-method for solution of karra ((((((((OPTIMAl Solution))))))))
-const Karra = (a) => {
-    return (b) => {
-        console.log(`${a} x ${b} = ${a * b}`)
+
+// const Karra = (a) => {
+//     return (b) => {
+//         console.log(`${a} x ${b} = ${a * b}`)
+//     }
+// }
+
+// for (i = 1; i <= 9; i++) {
+//     for (j = 1; j <= 10; j++) {
+//         Karra(i)(j)
+
+//     }
+//     console.log(`=========================`)
+// };
+
+
+
+// Function finding how many the same letter in object name and status 
+const data = [
+    { id: 1, name: 'Anvarxon', status: 'Student' },
+    { id: 2, name: 'Qodirxon', status: 'Mentor' },
+    { id: 3, name: 'Abdulahad', status: 'Jurnalist' },
+    { id: 4, name: 'Arofat', status: 'Teacher' },
+]
+
+const aFind = (letter) => {
+    let count = 0;
+    for (i = 0; i < data.length; i++) {
+
+        for (j = 0; j < data[i].name.length; j++) {
+            (data[i].name.toLowerCase()[j] == letter || data[i].status.toLowerCase()[j] == letter) && (count++)
+        }
     }
+    return count;
 }
 
-for (i = 1; i <= 9; i++) {
-    for (j = 1; j <= 10; j++) {
-        Karra(i)(j)
+console.log(aFind('t'))
 
-    }
-    console.log(`=========================`)
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
